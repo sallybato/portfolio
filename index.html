@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rebecca Beccari — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="glow"></div>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Rebecca Beccari.</span>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Estudante & Dev em formação</div>
+    <h1>Olá sou a<br><em>Rebecca.</em></h1>
+    <p class="hero-bio">
+      Estudante do 6º período de Ciência da Computação na Universidade Positivo.
+       Gosto de entender como os sistemas funcionam por dentro, transitando entre desenvolvimento back-end, dados e inteligência artificial.
+    </p>
+    <div class="hero-btns">
+      <a href="#projetos" class="btn-primary">Ver meus projetos</a>
+      <a href="#contato" class="btn-hero-ghost">Entrar em contato</a>
+    </div>
+  </div>
+  
+  <div class="hero-image-wrapper">
+    <img src="img/rebecca_pic.jpeg" alt="Foto de Rebecca Beccari" class="hero-image">
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="section-label">Sobre mim</div>
+  <div class="sobre-grid">
+    <div class="sobre-text">
+      <h2>Muito além do código na tela.</h2>
+      <p>
+        Gosto de tirar projetos do papel indo além da sala de aula — construindo aplicações do zero, estruturando códigos e testando ideias que vão desde o desenvolvimento web até a integração de modelos de machine learning.
+      </p>
+      <p>
+        Acredito que a tecnologia serve para resolver problemas reais, e por isso gosto de entender o ciclo completo de um sistema, do conceito até a entrega.
+      </p>
+      
+      <div class="diferencial-card">
+        <h4>🚀 Vivência em Liderança</h4>
+        <p>Como ex-Diretora de Marketing na Atlética de TI AAATI UP, liderei estratégias de comunicação e design, desenvolvendo visão de produto, gestão de pessoas e forte habilidade de trabalho em equipe.</p>
+      </div>
+    </div>
+    
+    <div class="skills-container">
+      <div class="skill-group">
+        <h3>Dados & IA</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Deep Learning (MLP)</span>
+        </div>
+      </div>
+      
+      <div class="skill-group">
+        <h3>Back-End & Arquitetura</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">WebSockets</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+      
+      <div class="skill-group">
+        <h3>Ferramentas</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Arquitetura MVC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="section-label" style="justify-content:center; text-align:center;">
+    Projetos em Destaque
+  </div>
+  <div class="projetos-grid">
+
+    <!-- 1. Classificadores ML -->
+    <a href="https://github.com/sallybato/avaliacao-a1-pratica" target="_blank" class="projeto-card">
+      <div class="projeto-icon">📊</div>
+      <div class="projeto-title">Sistemas de Classificação de Dados</div>
+      <p class="projeto-desc">
+        Pipeline completo de aprendizado de máquina aplicado a múltiplos datasets reais. Foco em pré-processamento de dados, engenharia de atributos e avaliação de desempenho de modelos.
+      </p>
+      <div class="projeto-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Scikit-Learn</span>
+      </div>
+      <span class="projeto-link">Ver no GitHub</span>
+    </a>
+
+    <!-- 2. Rede Neural -->
+    <a href="https://github.com/sallybato/RedeNeural-DesempenhoEstudantes" target="_blank" class="projeto-card">
+      <div class="projeto-icon">🧠</div>
+      <div class="projeto-title">Preditor de Desempenho Escolar</div>
+      <p class="projeto-desc">
+        Modelo de Rede Neural MLP desenvolvido para prever a aprovação de estudantes. Inclui tratamento de dados tabulares, modularização do treinamento e análise visual de acurácia.
+      </p>
+      <div class="projeto-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">MLP</span>
+        <span class="tag">Visualização</span>
+      </div>
+      <span class="projeto-link">Ver no GitHub</span>
+    </a>
+
+    <!-- 3. AeroTalks -->
+    <a href="https://github.com/joyllty/AeroTalks" target="_blank" class="projeto-card">
+      <div class="projeto-icon">💬</div>
+      <div class="projeto-title">AeroTalks — Chat em Tempo Real</div>
+      <p class="projeto-desc">
+        Plataforma de chat em tempo real com salas temáticas e recursos dinâmicos. Arquitetura back-end estruturada em Flask com comunicação via WebSockets e gerenciamento de estado.
+      </p>
+      <div class="projeto-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">WebSocket</span>
+        <span class="tag">Real-time</span>
+      </div>
+      <span class="projeto-link">Ver no GitHub</span>
+    </a>
+
+    <!-- 4. Javetteria -->
+    <a href="https://github.com/sallybato" target="_blank" class="projeto-card">
+      <div class="projeto-icon">☕</div>
+      <div class="projeto-title">Javetteria — Gestão de Cafeteria</div>
+      <p class="projeto-desc">
+        Sistema robusto de gerenciamento para cafeterias em Java. Foco em Programação Orientada a Objetos, padrão MVC, controle de estoque/pedidos e manipulação com Stream API.
+      </p>
+      <div class="projeto-tags">
+        <span class="tag">Java</span>
+        <span class="tag">MVC</span>
+        <span class="tag">OOP</span>
+        <span class="tag">Stream API</span>
+      </div>
+      <span class="projeto-link">Ver no GitHub</span>
+    </a>
+
+    <!-- 5. Criptografia RSA -->
+    <a href="https://github.com/sallybato/criptografia-rsa" target="_blank" class="projeto-card">
+      <div class="projeto-icon">🔒</div>
+      <div class="projeto-title">Motor de Criptografia RSA</div>
+      <p class="projeto-desc">
+        Implementação própria do algoritmo de criptografia assimétrica RSA. Foco na lógica matemática de geração de chaves públicas/privadas e processos de cifragem segura.
+      </p>
+      <div class="projeto-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Segurança</span>
+        <span class="tag">Criptografia</span>
+        <span class="tag">RSA</span>
+      </div>
+      <span class="projeto-link">Ver no GitHub</span>
+    </a>
+
+    <!-- 6. Criptografia SHA-256 -->
+    <a href="https://github.com/sallybato/criptografia-sha256" target="_blank" class="projeto-card">
+      <div class="projeto-icon">🔑</div>
+      <div class="projeto-title">Validador Hash SHA-256</div>
+      <p class="projeto-desc">
+        Implementação e manipulação de funções de hash criptográfico SHA-256. Foco na segurança de integridade de dados e geração de assinaturas hash seguras.
+      </p>
+      <div class="projeto-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Hash</span>
+        <span class="tag">SHA-256</span>
+        <span class="tag">Integridade</span>
+      </div>
+      <span class="projeto-link">Ver no GitHub</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="contato-card">
+    <div class="section-label" style="justify-content:center;">Próximos Passos</div>
+    <h2>Vamos conversar?</h2>
+    <p>Estou aberta a oportunidades de estágio em Dados ou Desenvolvimento Back-End. Se você tem um projeto interessante ou quer discutir ideias, adoraria ouvir de você!</p>
+    
+    <div class="contato-links">
+      <a href="mailto:rebeccabeccarifagundes@gmail.com" class="btn-primary">E-mail</a>
+      <a href="https://linkedin.com/in/rebecca-beccari-63236032b" target="_blank" class="btn-footer-ghost">LinkedIn</a>
+      <a href="https://github.com/sallybato" target="_blank" class="btn-footer-ghost">GitHub</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  Feito com dedicação por Rebecca Beccari © 2026
+</footer>
+
+<!-- Script para o Efeito Spotlight nos Cards e Skills -->
+<script>
+  document.querySelectorAll('.projeto-card, .skills-container').forEach(element => {
+    element.addEventListener('mousemove', e => {
+      const rect = element.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      element.style.setProperty('--mouse-x', `${x}px`);
+      element.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+</script>
+
+</body>
+</html>
