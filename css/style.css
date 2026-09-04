@@ -423,13 +423,122 @@ section { max-width: 1100px; margin: 0 auto; padding: 100px 48px; }
   border-color: rgba(139,92,246,0.3);
 }
 
+/* Grupo de links/botões no card */
+.projeto-links-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.projeto-btn-demo {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.projeto-btn-demo:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  transform: translateY(-2px);
+}
+
 .projeto-link {
   font-size: 13px; color: var(--white); display: flex; align-items: center; gap: 6px; font-weight: 500;
   transition: color 0.2s;
+  text-decoration: none;
 }
 .projeto-card:hover .projeto-link { color: var(--pink); }
 .projeto-link::after { content: '↗'; font-size: 16px; transition: transform 0.2s; }
 .projeto-card:hover .projeto-link::after { transform: translate(2px, -2px); }
+
+/* ── MODAL DE VÍDEO ── */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6),
+              0 0 30px rgba(139, 92, 246, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-content h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--white);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
+}
+
+.modal-video-wrapper {
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.modal-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 /* ── CONTATO ── */
 #contato {
@@ -442,7 +551,6 @@ section { max-width: 1100px; margin: 0 auto; padding: 100px 48px; }
   justify-content: center;
 }
 
-/* Painel de Contato com Glow Roxo/Rosa */
 .contato-card {
   background: rgba(30, 30, 40, 0.5);
   backdrop-filter: blur(16px);
@@ -507,11 +615,11 @@ section { max-width: 1100px; margin: 0 auto; padding: 100px 48px; }
   box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
 }
 
-/* Botões de LinkedIn e GitHub no Rodapé */
 .btn-footer-ghost {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
   color: var(--text);
+  text-decoration: none;
 }
 
 .btn-footer-ghost:hover {

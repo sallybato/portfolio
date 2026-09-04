@@ -134,8 +134,8 @@
       <span class="projeto-link">Ver no GitHub</span>
     </a>
 
-    <!-- 3. AeroTalks -->
-    <a href="https://github.com/joyllty/AeroTalks" target="_blank" class="projeto-card">
+    <!-- 3. AeroTalks (Com Botão de Demonstração em Modal) -->
+    <div class="projeto-card">
       <div class="projeto-icon">💬</div>
       <div class="projeto-title">AeroTalks — Chat em Tempo Real</div>
       <p class="projeto-desc">
@@ -147,8 +147,11 @@
         <span class="tag">WebSocket</span>
         <span class="tag">Real-time</span>
       </div>
-      <span class="projeto-link">Ver no GitHub</span>
-    </a>
+      <div class="projeto-links-group">
+        <button class="projeto-btn-demo" onclick="openModal()">Assistir Demo</button>
+        <a href="https://github.com/joyllty/AeroTalks" target="_blank" class="projeto-link">Ver no GitHub</a>
+      </div>
+    </div>
 
     <!-- 4. Javetteria -->
     <a href="https://github.com/sallybato" target="_blank" class="projeto-card">
@@ -221,7 +224,21 @@
   Feito com dedicação por Rebecca Beccari © 2026
 </footer>
 
-<!-- Script para o Efeito Spotlight nos Cards e Skills -->
+<!-- Modal de Vídeo da Demonstração -->
+<div id="videoModal" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>AeroTalks — Demonstração</h3>
+    <div class="modal-video-wrapper">
+      <video id="demoVideo" controls>
+        <source src="aerotalks.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- Script para o Efeito Spotlight nos Cards e Modal -->
 <script>
   document.querySelectorAll('.projeto-card, .skills-container').forEach(element => {
     element.addEventListener('mousemove', e => {
@@ -232,6 +249,22 @@
       element.style.setProperty('--mouse-y', `${y}px`);
     });
   });
+
+  function openModal() {
+    const modal = document.getElementById('videoModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(event) {
+    if (!event || event.target.id === 'videoModal' || event.target.classList.contains('modal-close')) {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('demoVideo');
+      modal.classList.remove('active');
+      video.pause();
+      document.body.style.overflow = 'auto';
+    }
+  }
 </script>
 
 </body>
